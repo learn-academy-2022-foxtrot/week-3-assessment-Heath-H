@@ -64,12 +64,16 @@
         }
         // No need to change anything ABOVE this line ^
 
-        return (
+        // my answer: on line 85 i added a closing div. on 70 i changed {} to "", but i still got an error message. i needed to ad drawCard into the curly braces to call on that function. on 73 i changed onclick to onClick
+
+
+        return ( 
+          <>
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}>
             Click to Draw a Card
           </button>
-          <button onclick={shuffle}>
+          <button onClick={shuffle}>
             Return Cards and Shuffle Deck
           </button>
           <div style={handStyles}>
@@ -81,9 +85,11 @@
               )
             })}
           </div>
+          </>
         )
       }
-
+      
+      
       // No need to change anything below this line
 
       const domContainer = document.querySelector('#react-container')
